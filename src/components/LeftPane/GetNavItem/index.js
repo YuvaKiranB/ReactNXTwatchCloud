@@ -1,4 +1,4 @@
-import {Link, withRouter} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 import {AiFillHome} from 'react-icons/ai'
 import {HiFire} from 'react-icons/hi'
@@ -54,4 +54,4 @@ const GetNavItem = props => {
   )
 }
 
-export default withRouter(GetNavItem)
+export default GetNavItem

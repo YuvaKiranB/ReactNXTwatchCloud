@@ -36,31 +36,10 @@ export const CloseButton = styled.button`
   color: ${props => (props.isDarkMode ? '#e2e8f0' : 'black')};
 `
 
-export const TabButton = styled.button`
-  padding: 15px;
+export const NavItems = styled.ul`
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
   width: 100%;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 20px;
-  text-decoration: none;
-  font-family: roboto;
-  color: ${props => (props.isActive ? '#ff0b37' : '#e2e8f0')};
-  color: ${props => !props.isActive && !props.isDarkMode && '#475569'};
-  background-color: transparent;
-  border-width: 0px;
-  cursor: pointer;
-  background-color: ${props => props.isActive && props.isDarkMode && '#424242'};
-  background-color: ${props =>
-    props.isActive && !props.isDarkMode && '#e2e8f0'};
-  padding-left: 30vw;
-`
-
-export const Description = styled.span`
-  margin-left: 14px;
-  color: ${props => (props.isDarkMode ? '#e2e8f0' : '#475569')};
-  color: ${props => !props.isDarkMode && props.isActive && 'black'};
-  font-weight: ${props => (props.isActive ? 500 : 400)};
 `

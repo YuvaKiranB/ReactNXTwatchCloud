@@ -1,11 +1,9 @@
-import {Link, withRouter} from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
 import Popup from 'reactjs-popup'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {RiCloseLine} from 'react-icons/ri'
-import {AiFillHome} from 'react-icons/ai'
-import {HiFire} from 'react-icons/hi'
-import {SiYoutubegaming} from 'react-icons/si'
-import {MdPlaylistAdd} from 'react-icons/md'
+
+import GetNavItem from '../../LeftPane/GetNavItem'
 
 import Context from '../../../Context'
 import {
@@ -14,23 +12,39 @@ import {
   SubContainer,
   MenuContainer,
   CloseButton,
-  TabButton,
-  Description,
+  NavItems,
 } from './styling'
+
+const NavItemsList = [
+  {id: 'HOME', description: 'Home'},
+  {id: 'TRENDING', description: 'Trending'},
+  {id: 'GAMING', description: 'Gaming'},
+  {id: 'SAVED VIDEOS', description: 'Saved videos'},
+]
 
 const GetHamburgerButton = props => (
   <Context.Consumer>
     {value => {
       const {isDarkMode} = value
+
       const color = isDarkMode ? 'white' : 'black'
 
       const {match} = props
       const {path} = match
+      let activeNav = null
 
-      const isHomeActive = path === '/'
-      const isTrendingActive = path === '/trending'
-      const isGamingActive = path === '/gaming'
-      const isSavedVideosActive = path === '/saved-videos'
+      if (path === '/') {
+        activeNav = 'HOME'
+      }
+      if (path === '/trending') {
+        activeNav = 'TRENDING'
+      }
+      if (path === '/gaming') {
+        activeNav = 'GAMING'
+      }
+      if (path === '/saved-videos') {
+        activeNav = 'SAVED VIDEOS'
+      }
       const overlayStyles = {
         backgroundColor: isDarkMode ? '#231f20' : 'white',
       }
@@ -57,62 +71,16 @@ const GetHamburgerButton = props => (
                   <RiCloseLine />
                 </CloseButton>
                 <MenuContainer>
-                  <Link to="/" className="link">
-                    <TabButton isActive={isHomeActive} isDarkMode={isDarkMode}>
-                      <AiFillHome />
-                      <Description
-                        isActive={isHomeActive}
-                        isDarkMode={isDarkMode}
-                      >
-                        Home
-                      </Description>
-                    </TabButton>
-                  </Link>
-
-                  <Link to="/trending" className="link">
-                    <TabButton
-                      isActive={isTrendingActive}
-                      isDarkMode={isDarkMode}
-                    >
-                      <HiFire />
-                      <Description
-                        isActive={isTrendingActive}
-                        isDarkMode={isDarkMode}
-                      >
-                        Trending
-                      </Description>
-                    </TabButton>
-                  </Link>
-
-                  <Link to="/gaming" className="link">
-                    <TabButton
-                      isActive={isGamingActive}
-                      isDarkMode={isDarkMode}
-                    >
-                      <SiYoutubegaming />
-                      <Description
-                        isActive={isGamingActive}
-                        isDarkMode={isDarkMode}
-                      >
-                        Gaming
-                      </Description>
-                    </TabButton>
-                  </Link>
-
-                  <Link to="/saved-videos" className="link">
-                    <TabButton
-                      isActive={isSavedVideosActive}
-                      isDarkMode={isDarkMode}
-                    >
-                      <MdPlaylistAdd />
-                      <Description
-                        isActive={isSavedVideosActive}
-                        isDarkMode={isDarkMode}
-                      >
-                        Saved videos
-                      </Description>
-                    </TabButton>
-                  </Link>
+                  <NavItems>
+                    {NavItemsList.map(eachItem => (
+                      <GetNavItem
+                        activeNav={activeNav}
+                        key={eachItem.id}
+                        description={eachItem.description}
+                        id={eachItem.id}
+                      />
+                    ))}
+                  </NavItems>
                 </MenuContainer>
               </SubContainer>
             )}

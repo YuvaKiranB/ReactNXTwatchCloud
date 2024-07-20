@@ -19,6 +19,9 @@ export const Tab = styled.div`
   background-color: ${props => props.isActive && props.isDarkMode && '#475569'};
   background-color: ${props =>
     props.isActive && !props.isDarkMode && '#e2e8f0'};
+  @media (max-width: 768px) {
+    padding-left: 30vw;
+  }
 `
 
 export const Description = styled.span`

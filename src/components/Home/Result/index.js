@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import {withRouter} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import {BsSearch} from 'react-icons/bs'
 import Cookies from 'js-cookie'
@@ -173,4 +172,4 @@ class ResultContainer extends Component {
   }
 }
 
-export default withRouter(ResultContainer)
+export default ResultContainer
