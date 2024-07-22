@@ -6,6 +6,7 @@ import {
   Thumbnail,
   Title,
   TagName,
+  ListItem,
 } from './styling'
 import './index.css'
 
@@ -20,18 +21,20 @@ const GetVideoCard = props => {
       {value => {
         const {isDarkMode} = value
         return (
-          <Link to={`/videos/${id}`} className="link">
-            <CardContainer>
-              <Thumbnail src={thumbnailUrl} alt="video thumbnail" />
-              <DescriptionContainer>
-                <Title isDarkMode={isDarkMode}>{title}</Title>
-                <TagName
-                  isDarkMode={isDarkMode}
-                >{`${viewCount} Watching`}</TagName>
-                <TagName isDarkMode={isDarkMode}>Worldwide</TagName>
-              </DescriptionContainer>
-            </CardContainer>
-          </Link>
+          <ListItem>
+            <Link to={`/videos/${id}`} className="link">
+              <CardContainer>
+                <Thumbnail src={thumbnailUrl} alt="video thumbnail" />
+                <DescriptionContainer>
+                  <Title isDarkMode={isDarkMode}>{title}</Title>
+                  <TagName
+                    isDarkMode={isDarkMode}
+                  >{`${viewCount} Watching`}</TagName>
+                  <TagName isDarkMode={isDarkMode}>Worldwide</TagName>
+                </DescriptionContainer>
+              </CardContainer>
+            </Link>
+          </ListItem>
         )
       }}
     </Context.Consumer>

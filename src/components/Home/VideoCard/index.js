@@ -14,6 +14,7 @@ import {
   TagsContainer,
   TagName,
   DotContainer,
+  CardsList,
 } from './styling'
 import './index.css'
 
@@ -30,34 +31,36 @@ const GetVideoCard = props => {
       {value => {
         const {isDarkMode} = value
         return (
-          <Link to={`/videos/${id}`} className="link">
-            <CardContainer>
-              <Thumbnail src={thumbnailUrl} alt="video thumbnail" />
-              <DescriptionContainer>
-                <ProfileImageContainer>
-                  <ProfileImage src={profileImageUrl} alt="channel logo" />
-                </ProfileImageContainer>
-                <TextContainer>
-                  <Title isDarkMode={isDarkMode}>{title}</Title>
-                  <TagsContainer>
-                    <TagName isDarkMode={isDarkMode}>{name}</TagName>
-                    <DotContainer isDarkMode={isDarkMode}>
-                      <BsDot className="dot" />
-                    </DotContainer>
+          <CardsList>
+            <Link to={`/videos/${id}`} className="link">
+              <CardContainer>
+                <Thumbnail src={thumbnailUrl} alt="video thumbnail" />
+                <DescriptionContainer>
+                  <ProfileImageContainer>
+                    <ProfileImage src={profileImageUrl} alt="channel logo" />
+                  </ProfileImageContainer>
+                  <TextContainer>
+                    <Title isDarkMode={isDarkMode}>{title}</Title>
+                    <TagsContainer>
+                      <TagName isDarkMode={isDarkMode}>{name}</TagName>
+                      <DotContainer isDarkMode={isDarkMode}>
+                        <BsDot className="dot" />
+                      </DotContainer>
 
-                    <TagName isDarkMode={isDarkMode}>{viewCount}</TagName>
-                    <DotContainer isDarkMode={isDarkMode}>
-                      <BsDot className="dot" />
-                    </DotContainer>
+                      <TagName isDarkMode={isDarkMode}>{viewCount}</TagName>
+                      <DotContainer isDarkMode={isDarkMode}>
+                        <BsDot className="dot" />
+                      </DotContainer>
 
-                    <TagName
-                      isDarkMode={isDarkMode}
-                    >{`${duration} ago`}</TagName>
-                  </TagsContainer>
-                </TextContainer>
-              </DescriptionContainer>
-            </CardContainer>
-          </Link>
+                      <TagName
+                        isDarkMode={isDarkMode}
+                      >{`${duration} ago`}</TagName>
+                    </TagsContainer>
+                  </TextContainer>
+                </DescriptionContainer>
+              </CardContainer>
+            </Link>
+          </CardsList>
         )
       }}
     </Context.Consumer>

@@ -8,8 +8,8 @@ import {
   ContentContainer,
   RightPane,
   NotFoundImage,
-  NotFoundPara1,
-  NotFoundPara2,
+  NotFoundHeading,
+  NotFoundPara,
   TextContainer,
 } from './styling'
 
@@ -36,12 +36,12 @@ const NotFound = () => (
                 />
               )}
               <TextContainer>
-                <NotFoundPara1 isDarkMode={isDarkMode}>
+                <NotFoundHeading isDarkMode={isDarkMode}>
                   Page Not Found
-                </NotFoundPara1>
-                <NotFoundPara2 isDarkMode={isDarkMode}>
+                </NotFoundHeading>
+                <NotFoundPara isDarkMode={isDarkMode}>
                   We are sorry, the page you requested could not be found.
-                </NotFoundPara2>
+                </NotFoundPara>
               </TextContainer>
             </RightPane>
           </ContentContainer>

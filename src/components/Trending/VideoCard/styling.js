@@ -103,3 +103,5 @@ export const ReviewAndDurationContainer = styled.div`
   flex-direction: row;
   align-items: center;
 `
+
+export const ListItem = styled.li``

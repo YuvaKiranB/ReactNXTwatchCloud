@@ -21,7 +21,7 @@ const Banner = () => (
           <ContentContainer>
             <LogoImage
               src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-              alt="website logo"
+              alt="nxt watch logo"
             />
             <BannerPara>
               Buy Nxt Watch Premium prepaid plans with UPI

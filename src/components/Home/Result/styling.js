@@ -66,7 +66,7 @@ export const NoResultImage = styled.img`
   margin-bottom: 20px;
 `
 
-export const NoResultPara1 = styled.p`
+export const NoResultHeading = styled.h1`
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 5px;
@@ -74,7 +74,7 @@ export const NoResultPara1 = styled.p`
   color: ${props => (props.isDarkMode ? '#f1f1f1' : 'black')};
 `
 
-export const NoResultPara2 = styled.p`
+export const NoResultPara = styled.p`
   margin-top: 8px;
   font-family: roboto;
   font-size: 20px;

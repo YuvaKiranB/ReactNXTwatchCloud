@@ -31,7 +31,7 @@ export const TextContainer = styled.div`
   width: 60vw;
 `
 
-export const NotFoundPara1 = styled.p`
+export const NotFoundHeading = styled.h1`
   margin-top: 40px;
   font-family: roboto;
   font-size: 24px;
@@ -40,7 +40,7 @@ export const NotFoundPara1 = styled.p`
   color: ${props => (props.isDarkMode ? ' #f1f1f1' : 'black')};
 `
 
-export const NotFoundPara2 = styled.p`
+export const NotFoundPara = styled.p`
   margin-top: 5px;
   font-size: 16px;
   font-weight: 400;

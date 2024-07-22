@@ -15,8 +15,8 @@ import {
   CardsList,
   NoResultContainer,
   NoResultImage,
-  NoResultPara1,
-  NoResultPara2,
+  NoResultHeading,
+  NoResultPara,
   RetryButton,
   LoaderContainer,
 } from './styling'
@@ -96,12 +96,12 @@ class ResultContainer extends Component {
         src="https://assets.ccbp.in/frontend/react-js/nxt-watch-no-search-results-img.png"
         alt="no videos"
       />
-      <NoResultPara1 isDarkMode={isDarkMode}>
+      <NoResultHeading isDarkMode={isDarkMode}>
         No Search results found
-      </NoResultPara1>
-      <NoResultPara2 isDarkMode={isDarkMode}>
+      </NoResultHeading>
+      <NoResultPara isDarkMode={isDarkMode}>
         Try different key words or remove search filter
-      </NoResultPara2>
+      </NoResultPara>
       <RetryButton onClick={this.retry}>Retry</RetryButton>
     </NoResultContainer>
   )

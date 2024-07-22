@@ -30,3 +30,4 @@ export const TagName = styled.p`
   margin-bottom: 10px;
   color: ${props => (props.isDarkMode ? '#64748b' : '#606060')};
 `
+export const ListItem = styled.li``

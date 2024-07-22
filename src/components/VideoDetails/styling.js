@@ -71,7 +71,7 @@ export const LikeButton = styled.button`
   margin-right: 20px;
   padding: 0px;
   height: 30px;
-  font-size: 24px;
+  font-size: 18px;
   color: ${props => (props.isLiked ? '#2563eb' : '#64748b ')};
   background-color: transparent;
   border-width: 0px;
@@ -87,7 +87,7 @@ export const DisLikeButton = styled.button`
   margin-right: 20px;
   padding: 0px;
   height: 30px;
-  font-size: 24px;
+  font-size: 18px;
   color: ${props => (props.isDisLiked ? '#2563eb' : '#64748b')};
   background-color: transparent;
   border-width: 0px;
@@ -110,7 +110,6 @@ export const SaveButton = styled.button`
   font-weight: 500;
   cursor: pointer;
 `
-
 export const ButtonName = styled.p`
   font-size: 18px;
   margin-left: 5px;

@@ -1,4 +1,4 @@
-import {withRouter} from 'react-router-dom'
+import {withRouter, Link} from 'react-router-dom'
 
 import {FaMoon} from 'react-icons/fa'
 import {IoSunnyOutline} from 'react-icons/io5'
@@ -26,17 +26,19 @@ const Header = () => (
 
       return (
         <HeaderContainer backgroundColor={isDarkMode ? '#313131' : 'white'}>
-          {isDarkMode ? (
-            <WebsiteLogo
-              src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png"
-              alt="website logo"
-            />
-          ) : (
-            <WebsiteLogo
-              src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-              alt="website logo"
-            />
-          )}
+          <Link to="/">
+            {isDarkMode ? (
+              <WebsiteLogo
+                src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png"
+                alt="website logo"
+              />
+            ) : (
+              <WebsiteLogo
+                src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                alt="website logo"
+              />
+            )}
+          </Link>
 
           <IconsContainer>
             <ThemeSwitchButton

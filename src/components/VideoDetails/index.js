@@ -37,6 +37,7 @@ import {
 } from './styling'
 
 import Header from '../Header'
+import './index.css'
 
 const apiStatusConstants = {
   initial: 'INITIAL',
@@ -170,8 +171,8 @@ class VideoDetails extends Component {
                               onClick={clickedLike}
                               type="button"
                             >
-                              <BiLike />
-                              <ButtonName>Like</ButtonName>
+                              <BiLike className="actionButton" />
+                              Like
                             </LikeButton>
 
                             <DisLikeButton
@@ -179,8 +180,8 @@ class VideoDetails extends Component {
                               type="button"
                               isDisLiked={isDisLiked}
                             >
-                              <BiDislike />
-                              <ButtonName>Dislike</ButtonName>
+                              <BiDislike className="actionButton" />
+                              Dislike
                             </DisLikeButton>
 
                             <SaveButton

@@ -61,3 +61,5 @@ export const DotContainer = styled.div`
   padding: 0px;
   margin-top: 2px;
 `
+
+export const CardsList = styled.li``
