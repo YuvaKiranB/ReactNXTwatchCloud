@@ -27,7 +27,7 @@ const SavedVideos = () => (
       const {isDarkMode, savedVideos} = value
 
       return (
-        <SavedVideosContainer isDarkMode={isDarkMode}>
+        <SavedVideosContainer data-testid="savedVideos" isDarkMode={isDarkMode}>
           <Header />
           <ContentContainer>
             <LeftPane />

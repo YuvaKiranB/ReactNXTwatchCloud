@@ -37,7 +37,9 @@ const ErrorCard = props => {
               We are having some trouble to complete your request. Please try
               again.
             </ErrorPara>
-            <RetryButton onClick={clickedRetry}>Retry</RetryButton>
+            <RetryButton type="button" onClick={clickedRetry}>
+              Retry
+            </RetryButton>
           </ErrorContainer>
         )
       }}
